@@ -1,0 +1,15 @@
+# 辅助工具
+node_modules
+yarn.lock
+
+# project ignores
+lib
+dist
+css
+
+#
+tmp
+
+# public 
+public/*.css
+public/*.js

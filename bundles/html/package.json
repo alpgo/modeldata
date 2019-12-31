@@ -1,0 +1,9 @@
+{
+  "name": "@modeldata/html",
+  "version": "1.0.0",
+  "bundle": "dist/html.js",
+  "standalone": true,
+  "dependencies": {
+    "@modeldata/htmlview": "^1.0.0"
+  }
+}

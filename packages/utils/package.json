@@ -1,0 +1,10 @@
+{
+    "name": "@modeldata/utils",
+    "version": "1.0.0",
+    "bundle": "dist/utils.js",
+    "files": [
+      "lib",
+      "dist"
+    ]
+  }
+  

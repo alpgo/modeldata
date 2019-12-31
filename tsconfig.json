@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "allowJs": false,
+    "sourceMap": true,
+    "removeComments": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "composite": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": false,
+    "baseUrl": "./",
+    "paths": { "@modeldata/*": ["node_modules/@modeldata/*/src"] }
+  },
+  "exclude": [
+    "node_modules",
+    "**/dist/**",
+    "**/lib/**",
+    "**/tmp/**",
+    "**/test/**",
+    "**/scripts/**",
+    "**/types/**",
+    "rollup.config.js"
+  ]
+}

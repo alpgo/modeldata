@@ -1,0 +1,8 @@
+{
+  "name": "@modeldata/polyfill",
+  "version": "1.0.0",
+  "bundle": "dist/polyfill.js",
+  "dependencies": {
+    "es6-promise-polyfill": "^1.2.0"
+  }
+}

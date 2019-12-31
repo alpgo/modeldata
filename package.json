@@ -1,0 +1,47 @@
+{
+  "name": "model",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/view/*",
+    "bundles/*"
+  ],
+  "scripts": {
+    "json": "json-server db.js -p 3500",
+    "bootstrap": "lerna bootstrap",
+    "clean:build": "rimraf \"{bundles,packages,packages/view}/*/{lib,dist}\"",
+    "preclean": "npm run clean:build",
+    "clean": "lerna clean",
+    "test": "mocha test/index.js",
+    "prebuild": "npm run clean:build",
+    "build": "rollup -c",
+    "watch": "rollup -cw"
+  },
+  "devDependencies": {
+    "@lerna/batch-packages": "^3.16.0",
+    "browser-sync": "^2.26.7",
+    "chai": "^4.2.0",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-run": "^1.7.1",
+    "json-server": "^0.15.1",
+    "lerna": "^3.19.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^6.2.2",
+    "rollup": "^1.27.14",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.3",
+    "rollup-plugin-typescript": "^1.0.1",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0",
+    "tslib": "*",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "es6-promise-polyfill": "^1.2.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@modeldata/decorate",
+  "version": "1.0.0",
+  "module": "lib/decorate.es.js",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "dependencies": {
+    "@modeldata/route": "^1.0.0",
+    "@modeldata/utils": "^1.0.0"
+  }
+}

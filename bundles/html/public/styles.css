@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font: 100%/1.5 sans-serif;
+}
+
+/* 背景层 */
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.sky {
+    height: 50%;
+    background: skyblue;
+}
+
+.glass {
+    height: 50%;
+    background: green;
+}
+
+.popup {
+    opacity: 0;
+    animation: drop 0.3s ease forwards;
+}
+
+/* 弹窗动画 */
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    60% {
+        transform: translateY(50px);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 表格 */
+
+.data-table {
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+    width: 80%;
+    margin: 0 auto 20px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-radius: 20px 20px 0 0;
+}
+
+.data-table tr:nth-child(1) {
+    background: silver;
+}
+
+.data-table tr, .data-table td {
+    border: 1px solid white;
+}
+
+.data-table tr:nth-child(1) {
+    border: 0;
+}
+
+.data-table th {
+    border-right: 1px solid white;
+}
+
+.data-table th:last-child {
+    border-right: 0;
+}
+
+.data-table th:nth-child(1) {
+    border-radius: 20px 0 0 0;
+}
+
+.data-table th:nth-last-child(1) {
+    border-radius: 0 20px 0 0;
+}
+
+.data-table th, .data-table td {
+    padding: 20px 10px;
+}
+
+.data-table th {
+    font-weight: bold;
+}
+
+.data-table td {
+    text-align: center;
+}
+
+.data-table tr:nth-child(odd) {
+    background: #80c5e0;
+}
+
+.data-table tr:nth-child(odd):hover {
+    background: #3eb2e0;
+}
+
+.data-table tr:nth-child(even) {
+    background: #f5deb3;
+}
+
+.data-table tr:nth-child(even):hover {
+    background: #f1be5d;
+}
+
+.data-table tr:nth-child(1)~tr td:nth-last-child(1) {
+    cursor: pointer;
+}

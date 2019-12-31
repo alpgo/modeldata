@@ -1,0 +1,13 @@
+{
+    "name": "@modeldata/route",
+    "version": "1.0.0",
+    "bundle": "dist/route.js",
+    "files": [
+      "lib",
+      "dist"
+    ],
+    "dependencies": {
+        "@modeldata/utils": "^1.0.0"
+    }
+  }
+  
