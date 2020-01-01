@@ -11,5 +11,5 @@ css
 tmp
 
 # public 
-public/*.css
-public/*.js
+# bundles/**/public/*.css
+bundles/**/public/*.js
