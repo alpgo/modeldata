@@ -1,6 +1,6 @@
 /*!
  * @modeldata/html - v1.0.0
- * Compiled Tue, 31 Dec 2019 09:47:38 UTC
+ * Compiled Wed, 01 Jan 2020 12:52:20 UTC
  *
  * @modeldata/html is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
@@ -51,7 +51,6 @@
             }
         }
     }
-    //# sourceMappingURL=forEach.js.map
 
     /**
      * Trim excess whitespace off the beginning and end of a string
@@ -147,7 +146,6 @@
         });
         return parsed;
     }
-    //# sourceMappingURL=url.js.map
 
     /**
      * Update an Error with the specified config, error code, and response.
@@ -172,7 +170,6 @@
         };
         return error;
     }
-    //# sourceMappingURL=createError.js.map
 
     /**
      * AJAX接口的底层实现方法
@@ -285,7 +282,6 @@
             request.send(requestData);
         });
     }
-    //# sourceMappingURL=ajax.js.map
 
     /**
      * 路由缓存<id, route>
@@ -301,7 +297,6 @@
         routeID++;
         return routeID;
     }
-    //# sourceMappingURL=container.js.map
 
     var onSuccess = function (currentRoute, data) {
         return data;
@@ -374,14 +369,12 @@
         };
         return options;
     }
-    //# sourceMappingURL=registerRoute.js.map
 
     var products = registerRoute({
         name: "获取产品列表",
         method: "get",
         url: "/products"
     });
-    //# sourceMappingURL=products.js.map
 
     registerHttp(function (currentRoute, respData) {
         currentRoute.data = respData.data;
@@ -391,7 +384,6 @@
         console.log("currentRoute.url=\"" + currentRoute.config.url + "\" occured error " + err);
     });
     httpInit("http://localhost:3500");
-    //# sourceMappingURL=init.js.map
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -439,7 +431,6 @@
             method.call(thisCtx);
         });
     }
-    //# sourceMappingURL=init.js.map
 
     var KEY$1 = "__http__";
     function http(route) {
@@ -461,7 +452,6 @@
             });
         });
     }
-    //# sourceMappingURL=http.js.map
 
     var KEY$2 = "__after__";
     function after(fn) {
@@ -489,14 +479,12 @@
             Object.defineProperty(target, name, desc);
         });
     }
-    //# sourceMappingURL=after.js.map
 
     function use(thisArgs) {
         handleInit(thisArgs);
         handleHttp(thisArgs);
         handleAfter(thisArgs);
     }
-    //# sourceMappingURL=use.js.map
 
     /**
      * HTML选择器
@@ -508,7 +496,6 @@
         var elements = context.querySelectorAll(selector);
         return Array.prototype.slice.call(elements);
     }
-    //# sourceMappingURL=utils.js.map
 
     var Products = /** @class */ (function () {
         function Products() {
@@ -575,7 +562,6 @@
     }());
 
     new Products();
-    //# sourceMappingURL=index.js.map
 
 }());
 //# sourceMappingURL=html.js.map

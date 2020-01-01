@@ -1,0 +1,14 @@
+{
+    "name": "@modeldata/layaview",
+    "version": "1.0.0",
+    "bundle": "dist/layaview.js",
+    "files": [
+      "lib",
+      "dist"
+    ],
+    "dependencies": {
+      "@modeldata/route": "^1.0.0",
+      "@modeldata/decorate": "^1.0.0"
+    }
+  }
+  

@@ -1,0 +1,9 @@
+{
+  "name": "@modeldata/laya",
+  "version": "1.0.0",
+  "bundle": "dist/laya.js",
+  "standalone": true,
+  "dependencies": {
+    "@modeldata/layaview": "^1.0.0"
+  }
+}

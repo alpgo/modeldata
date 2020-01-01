@@ -9,7 +9,7 @@
   "scripts": {
     "json": "json-server db.js -p 3500",
     "bootstrap": "lerna bootstrap",
-    "clean:build": "rimraf \"{bundles,packages,packages/view}/*/{lib,dist}\"",
+    "clean:build": "rimraf \"{packages,packages/view}/*/{lib,dist}\"",
     "preclean": "npm run clean:build",
     "clean": "lerna clean",
     "test": "mocha test/index.js",
