@@ -1,0 +1,12 @@
+{
+  "name": "@modeldata/redpoint",
+  "version": "1.0.0",
+  "bundle": "dist/redpoint.js",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "dependencies": {
+    "@modeldata/route": "^1.0.0"
+  }
+}

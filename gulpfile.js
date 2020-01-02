@@ -30,6 +30,7 @@ gulp.task("serve", gulp.series("build", 'html-mainjs', 'laya-mainjs', function (
     browserSync.init({
         server: "bundles/"
     });
+    gulp.watch(["bundles/**/**/*.css", "bundles/**/**/*.html"]).on("change", browserSync.reload);
     gulp.watch("bundles/html/dist/html.js", gulp.series('html-mainjs'));
     gulp.watch("bundles/laya/dist/laya.js", gulp.series('laya-mainjs'));
 }));

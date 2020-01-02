@@ -1,4 +1,4 @@
 import "./init";
 
-import Products from './Products';
-export { Products };
+import ProductLayer from './ProductLayer';
+export { ProductLayer };

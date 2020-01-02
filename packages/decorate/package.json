@@ -1,7 +1,7 @@
 {
   "name": "@modeldata/decorate",
   "version": "1.0.0",
-  "module": "lib/decorate.es.js",
+  "bundle": "dist/decorate.js",
   "files": [
     "lib",
     "dist"

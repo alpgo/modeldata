@@ -2,7 +2,7 @@ import * as decorate from '@modeldata/decorate';
 import * as route from '@modeldata/route';
 import { $$ } from './utils';
 
-export default class Products
+export default class ProductLayer
 {
     constructor()
     {
@@ -31,6 +31,16 @@ export default class Products
         console.log('show enter animation');
     }
 
+    @decorate.init
+    registerListener()
+    {
+        const navCartUI = $$('nav .cart-icon', this.context)[0];
+        navCartUI.addEventListener('click', () =>
+        {
+            console.log('goto cart layer');
+        }, false);
+    }
+
     @decorate.http(route.products)
     loadData()
     {
@@ -42,7 +52,7 @@ export default class Products
      * 渲染表格数据
      * @param data 
      */
-    @decorate.after(Products.prototype.showPopupAnimation)
+    @decorate.after(ProductLayer.prototype.showPopupAnimation)
     renderData(data: route.ProductsType)
     {
         const tbody = $$('tbody', this.table)[0];
