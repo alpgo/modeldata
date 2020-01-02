@@ -50,10 +50,6 @@ html, body {
 
 /* 表格 */
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 .container {
     width: 80%;
     max-height: 70vh;
@@ -136,6 +132,7 @@ html, body {
 }
 
 #products a.cart-icon {
+    position: relative;
     display: inline-block;
     width: 80px;
     height: 80px;
@@ -149,4 +146,22 @@ html, body {
 #products table a.cart-icon {
     width: 40px;
     height: 40px;
+}
+
+#products nav a.redpoint:after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    background: red;
+    content: "";
+    border-radius: 50%;
+    box-shadow: 0 0 5px #fff;
+}
+
+/* 隐蔽滚动条 */
+
+::-webkit-scrollbar {
+    display: none;
 }

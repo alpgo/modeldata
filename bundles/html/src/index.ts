@@ -1,3 +1,3 @@
 import * as htmlview from "@modeldata/htmlview";
 
-new htmlview.Products();
+new htmlview.ProductLayer();

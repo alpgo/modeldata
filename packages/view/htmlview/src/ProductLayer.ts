@@ -1,5 +1,6 @@
 import * as decorate from '@modeldata/decorate';
 import * as route from '@modeldata/route';
+import * as redpoint from '@modeldata/redpoint';
 import { $$ } from './utils';
 
 export default class ProductLayer
@@ -90,5 +91,21 @@ export default class ProductLayer
         console.log("showPopupAnimation");
         this.container.style.display = 'block';
         this.container.classList.add('popup');
+    }
+
+    /**
+     * 小红点处理
+     * @param data 
+     */
+    @decorate.redpoint(redpoint.cartsRed)
+    showRedpoint(data: boolean)
+    {
+        console.log(`reddata: ${data}`);
+        const element = $$('nav a.cart-icon', this.context)[0];
+        if (data) {
+            element.classList.add('redpoint');
+        } else {
+            element.classList.remove('redpoint');
+        }
     }
 }

@@ -49,7 +49,8 @@ export function registerRoute<T>(config: ConfigType): RouteType<T>
         request: function ()
         {
             return sendRequest(currentRoute);
-        }
+        },
+        updates: [] as Function[]
     };
     saveRoute(routeID, currentRoute);
     return currentRoute;
@@ -67,7 +68,10 @@ function sendRequest(currentRoute: RouteType<any>): Promise<any>
 
     request.then(function (resp: AjaxResponseType)
     {
+        const oldData = currentRoute.data;
         const data = onSuccess(currentRoute, resp)
+        // 数据更新了, 通知所有监听函数
+        updates(currentRoute, oldData);
         return data;
     }).catch(function (error: AjaxError)
     {
@@ -93,4 +97,13 @@ function transferToAjaxConfig(config: ConfigType): AjaxConfigType
         responseType: 'json'
     };
     return options;
+}
+
+/**
+ * 数据加载完毕后, 若数据发生变化, 自动通知所有和该数据有关联的监听函数
+ */
+function updates(currentRoute: RouteType<any>, oldData: any)
+{
+    const newData = currentRoute.data;
+    currentRoute.updates.forEach(fn => fn());
 }

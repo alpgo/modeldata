@@ -7,6 +7,7 @@
     "dist"
   ],
   "dependencies": {
-    "@modeldata/route": "^1.0.0"
+    "@modeldata/route": "^1.0.0",
+    "@modeldata/utils": "^1.0.0"
   }
 }

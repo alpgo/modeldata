@@ -11,4 +11,5 @@ export interface RouteType<T>
     config: ConfigType;
     data?: T;
     request: () => Promise<any>;
+    updates: Function[];
 }

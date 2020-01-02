@@ -5,3 +5,5 @@ export { http } from './http';
 export { use } from './use';
 
 export { after }  from './after';
+
+export { redpoint } from './redpoint';
