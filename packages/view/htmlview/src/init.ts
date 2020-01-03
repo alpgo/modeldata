@@ -1,4 +1,5 @@
 import { registerHttp, RouteType, AjaxResponseType, httpInit } from '@modeldata/route';
+import * as guide from '@modeldata/guide';
 
 registerHttp(function (currentRoute: RouteType<any>, respData: AjaxResponseType)
 {
@@ -11,3 +12,5 @@ registerHttp(function (currentRoute: RouteType<any>, respData: AjaxResponseType)
 });
 
 httpInit("http://localhost:3500");
+
+guide.htmlInit();

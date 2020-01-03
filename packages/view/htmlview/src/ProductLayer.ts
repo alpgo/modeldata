@@ -2,6 +2,7 @@ import * as decorate from '@modeldata/decorate';
 import * as route from '@modeldata/route';
 import * as redpoint from '@modeldata/redpoint';
 import { $$ } from './utils';
+import { htmlStep } from '@modeldata/guide';
 
 export default class ProductLayer
 {
@@ -86,7 +87,7 @@ export default class ProductLayer
     /**
      * 弹出动画
      */
-    @decorate.after(ProductLayer.prototype, "displayXY")
+    @decorate.after(ProductLayer.prototype, "guideStep1")
     showPopupAnimation()
     {
         console.log("showPopupAnimation");
@@ -110,16 +111,38 @@ export default class ProductLayer
         }
     }
 
-    displayXY()
+    @decorate.after(ProductLayer.prototype, "guideStep2")
+    guideStep1()
     {
-        const td = $$('tr:first-child th:last-child', this.container)[0];
+        const navCartUI = $$('nav .cart-icon', this.context)[0];
         setTimeout(() =>
         {
-            const rect = td.getBoundingClientRect();
-            console.log(rect, td);
+            const rect = navCartUI.getBoundingClientRect();
             const x = rect.x + rect.width / 2;
             const y = rect.y + rect.height / 2;
-            console.log(x, y);
+            htmlStep({
+                pageX: x,
+                pageY: y,
+                eventType: "click",
+                eventHandler: (e: Event) =>
+                {
+                    var evt = document.createEvent("HTMLEvents");
+                    evt.initEvent("click", false, false);
+                    navCartUI.dispatchEvent(evt);
+                    return;
+                }
+            });
         }, 1000);
+    }
+ 
+    guideStep2() {
+        setTimeout(() => {
+            htmlStep({
+                pageX: 0,
+                pageY: 0,
+                eventType: "",
+                eventHandler: null
+            });
+        }, 5000);
     }
 }

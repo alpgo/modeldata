@@ -1,15 +1,15 @@
 {
-    "name": "@modeldata/htmlview",
-    "version": "1.0.0",
-    "bundle": "dist/htmlview.js",
-    "files": [
-      "lib",
-      "dist"
-    ],
-    "dependencies": {
-      "@modeldata/route": "^1.0.0",
-      "@modeldata/decorate": "^1.0.0",
-      "@modeldata/redpoint": "^1.0.0"
-    }
+  "name": "@modeldata/htmlview",
+  "version": "1.0.0",
+  "bundle": "dist/htmlview.js",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "dependencies": {
+    "@modeldata/route": "^1.0.0",
+    "@modeldata/decorate": "^1.0.0",
+    "@modeldata/redpoint": "^1.0.0",
+    "@modeldata/guide": "^1.0.0"
   }
-  
+}
