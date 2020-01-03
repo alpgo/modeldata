@@ -1,0 +1,9 @@
+{
+  "name": "@modeldata/guide",
+  "version": "1.0.0",
+  "bundle": "dist/guide.js",
+  "files": [
+    "lib",
+    "dist"
+  ]
+}

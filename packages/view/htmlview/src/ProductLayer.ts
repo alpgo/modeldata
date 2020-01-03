@@ -53,7 +53,7 @@ export default class ProductLayer
      * 渲染表格数据
      * @param data 
      */
-    @decorate.after(ProductLayer.prototype.showPopupAnimation)
+    @decorate.after(ProductLayer.prototype, "showPopupAnimation")
     renderData(data: route.ProductsType)
     {
         const tbody = $$('tbody', this.table)[0];
@@ -86,6 +86,7 @@ export default class ProductLayer
     /**
      * 弹出动画
      */
+    @decorate.after(ProductLayer.prototype, "displayXY")
     showPopupAnimation()
     {
         console.log("showPopupAnimation");
@@ -107,5 +108,18 @@ export default class ProductLayer
         } else {
             element.classList.remove('redpoint');
         }
+    }
+
+    displayXY()
+    {
+        const td = $$('tr:first-child th:last-child', this.container)[0];
+        setTimeout(() =>
+        {
+            const rect = td.getBoundingClientRect();
+            console.log(rect, td);
+            const x = rect.x + rect.width / 2;
+            const y = rect.y + rect.height / 2;
+            console.log(x, y);
+        }, 1000);
     }
 }
