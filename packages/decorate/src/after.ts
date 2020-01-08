@@ -26,6 +26,7 @@ export function handleAfter(thisArgs: any)
     const target = Object.getPrototypeOf(thisArgs);
     if (list.indexOf(target) == -1) {
         updateDescriptor(target);
+        list.push(target);
     } else { }
 }
 
