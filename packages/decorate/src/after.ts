@@ -13,15 +13,24 @@ export function after(proto: any, fname: string)
         const obj = target[KEY] = target[KEY] || {};
         const arr = obj[name] = obj[name] || [];
         arr.push({
-            proto, 
+            proto,
             fname
         });
     };
 }
 
+const list: any[] = [];
+
 export function handleAfter(thisArgs: any)
 {
     const target = Object.getPrototypeOf(thisArgs);
+    if (list.indexOf(target) == -1) {
+        updateDescriptor(target);
+    } else { }
+}
+
+function updateDescriptor(target: any)
+{
     const obj = target[KEY] || {};
     utils.forEach(obj, function (arr: any[], name: string)
     {
@@ -32,7 +41,7 @@ export function handleAfter(thisArgs: any)
             const _this = this;
             const args = Array.prototype.slice.call(arguments);
             const result = originValue.call(this, ...args);
-            utils.forEach(arr, function (item: {proto: any, fname: string})
+            utils.forEach(arr, function (item: { proto: any, fname: string })
             {
                 // 因为proto[fname]对象的原始方法, 在代码装饰器处理过程中可能被修改了, 所以需要动态获取该函数
                 const fn = Object.getOwnPropertyDescriptor(item.proto, item.fname).value;

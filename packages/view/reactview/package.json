@@ -1,0 +1,9 @@
+{
+  "name": "@modeldata/reactview",
+  "version": "1.0.0",
+  "bundle": "dist/layaview.js",
+  "files": [
+    "lib",
+    "dist"
+  ]
+}
