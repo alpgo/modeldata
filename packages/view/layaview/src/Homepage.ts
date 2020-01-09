@@ -3,12 +3,6 @@ import * as route from '@modeldata/route';
 
 export class Homepage extends Laya.Sprite
 {
-    constructor()
-    {
-        super();
-        decorate.use(this);
-    }
-
     @decorate.init
     loadRes()
     {

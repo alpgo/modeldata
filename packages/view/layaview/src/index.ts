@@ -1,3 +1,4 @@
+import './layapolyfill';
 import * as decorate from '@modeldata/decorate';
 import * as route from '@modeldata/route';
 import { Homepage } from './Homepage';
