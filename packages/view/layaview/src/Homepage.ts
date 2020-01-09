@@ -1,6 +1,8 @@
 import * as decorate from '@modeldata/decorate';
 import * as route from '@modeldata/route';
 
+// @ts-ignore
+@decorate._class
 export class Homepage extends Laya.Sprite
 {
     @decorate.init

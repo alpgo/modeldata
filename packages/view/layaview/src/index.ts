@@ -3,13 +3,10 @@ import * as decorate from '@modeldata/decorate';
 import * as route from '@modeldata/route';
 import { Homepage } from './Homepage';
 
+// @ts-ignore
+@decorate._class
 export class Main
 {
-    constructor()
-    {
-        decorate.use(this);
-    }
-
     @decorate.init
     initStage()
     {
